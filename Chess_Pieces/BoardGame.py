@@ -1,5 +1,5 @@
-from Chessman import Chessman
-
+from Chess_Pieces.Chessman import Chessman
+       
 HEIGHT = 8
 WIDTH = 8
 class BoardGame:
