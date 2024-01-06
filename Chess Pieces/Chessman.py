@@ -4,6 +4,7 @@ class Chessman:
         self.enemy = color  # b = black, w = white
         self.possible_move = {}  # Store step to move (-1, 0), (1, 0), (0, 1), ...
         self.boardGame = boardGame
+        self.img = ""
     
     # Get the possible move, dont care about checkmate
     def get_possible_move(self):

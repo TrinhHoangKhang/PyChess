@@ -1,7 +1,18 @@
 from Chessman import Chessman
+from pathlib import Path
+from BoardGame import BoardGame
+
+PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent
 
 class Castle(Chessman):
-    def __init__(self):
+    def __init__(self, x, y, enemy, board):
+        super().__init__(x, y, enemy, board)
+
+        if self.enemy == 1:
+            self.img_src = PATH/"Resources/Images/castle1.png"
+        else:
+            self.img_src = PATH/"Resources/Images/castle2.png"
+
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}
 
     def move(self, x , y):

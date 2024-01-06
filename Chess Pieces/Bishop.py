@@ -1,7 +1,18 @@
 from Chessman import Chessman
+from pathlib import Path
+from BoardGame import BoardGame
+
+PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent
 
 class Bishop(Chessman):
-    def __init__(self):
+    def __init__(self, x, y, enemy, board):
+        super().__init__(x, y, enemy, board)
+
+        if self.enemy == 1:
+            self.img_src = PATH/"Resources/Images/bishop1.png"
+        else:
+            self.img_src = PATH/"Resources/Images/bishop2.png"
+            
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if abs(x) == abs(y) and (x, y) != (0, 0)}
 
     def move(self, x , y):
