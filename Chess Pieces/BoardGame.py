@@ -1,9 +1,11 @@
 from Chessman import Chessman
 
+HEIGHT = 8
+WIDTH = 8
 class BoardGame:
-    def __init__(self, height, width):
-        self.height = height
-        self.width = width
+    def __init__(self):
+        self.height = HEIGHT
+        self.width = WIDTH
         self.chessmans = []  #Store chessmans in list
     
     def add_chessman(self, chessman):
