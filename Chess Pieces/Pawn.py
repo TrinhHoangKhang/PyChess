@@ -1,7 +1,17 @@
 from Chessman import Chessman
+from pathlib import Path
+from BoardGame import BoardGame
+
+PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent
 
 class Pawn(Chessman):
-    def __init__(self):
+    def __init__(self, x, y, enemy, board):
+        super().__init__(x, y, enemy, board)
+
+        if self.enemy == 1:
+            self.img_src = PATH/"Resources/Images/pawn1.png"
+        else:
+            self.img_src = PATH/"Resources/Images/pawn2.png"
         self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}
 
     def move(self, x , y):
@@ -45,3 +55,4 @@ class Pawn(Chessman):
         else:
             print(f"{(x, y)} out of 8x8")
             return 0
+    
