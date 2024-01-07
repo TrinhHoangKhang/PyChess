@@ -1,6 +1,5 @@
-from Chessman import Chessman
+from Chess_Pieces.Chessman import Chessman
 from pathlib import Path
-from BoardGame import BoardGame
 
 PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent
 
@@ -9,9 +8,9 @@ class Pawn(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = PATH/"Resources/Images/pawn1.png"
+            self.img_src = "https://i.ibb.co/2yL2DQZ/pawn1.png"
         else:
-            self.img_src = PATH/"Resources/Images/pawn2.png"
+            self.img_src = "https://i.ibb.co/58F8pSD/pawn2.png"
         self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}
 
     def move(self, x , y):

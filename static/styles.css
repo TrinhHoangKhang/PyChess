@@ -46,3 +46,13 @@ body {
 .even-row{
     background-color: #E9EDCC;
 }
+
+.img-with-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cell-highlight {
+    background-color: lightblue;
+}

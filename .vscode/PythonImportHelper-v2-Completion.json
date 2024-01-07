@@ -1,146 +1,10 @@
 [
     {
         "label": "Chessman",
-        "importPath": "Chessman",
-        "description": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
         "isExtraImport": true,
-        "detail": "Chessman",
-        "documentation": {}
-    },
-    {
-        "label": "Chessman",
-        "importPath": "Chessman",
-        "description": "Chessman",
-        "isExtraImport": true,
-        "detail": "Chessman",
-        "documentation": {}
-    },
-    {
-        "label": "Chessman",
-        "importPath": "Chessman",
-        "description": "Chessman",
-        "isExtraImport": true,
-        "detail": "Chessman",
-        "documentation": {}
-    },
-    {
-        "label": "Chessman",
-        "importPath": "Chessman",
-        "description": "Chessman",
-        "isExtraImport": true,
-        "detail": "Chessman",
-        "documentation": {}
-    },
-    {
-        "label": "Chessman",
-        "importPath": "Chessman",
-        "description": "Chessman",
-        "isExtraImport": true,
-        "detail": "Chessman",
-        "documentation": {}
-    },
-    {
-        "label": "Chessman",
-        "importPath": "Chessman",
-        "description": "Chessman",
-        "isExtraImport": true,
-        "detail": "Chessman",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "BoardGame",
-        "importPath": "BoardGame",
-        "description": "BoardGame",
-        "isExtraImport": true,
-        "detail": "BoardGame",
-        "documentation": {}
-    },
-    {
-        "label": "BoardGame",
-        "importPath": "BoardGame",
-        "description": "BoardGame",
-        "isExtraImport": true,
-        "detail": "BoardGame",
-        "documentation": {}
-    },
-    {
-        "label": "BoardGame",
-        "importPath": "BoardGame",
-        "description": "BoardGame",
-        "isExtraImport": true,
-        "detail": "BoardGame",
-        "documentation": {}
-    },
-    {
-        "label": "BoardGame",
-        "importPath": "BoardGame",
-        "description": "BoardGame",
-        "isExtraImport": true,
-        "detail": "BoardGame",
-        "documentation": {}
-    },
-    {
-        "label": "BoardGame",
-        "importPath": "BoardGame",
-        "description": "BoardGame",
-        "isExtraImport": true,
-        "detail": "BoardGame",
-        "documentation": {}
-    },
-    {
-        "label": "BoardGame",
-        "importPath": "BoardGame",
-        "description": "BoardGame",
-        "isExtraImport": true,
-        "detail": "BoardGame",
+        "detail": "Chess_Pieces.Chessman",
         "documentation": {}
     },
     {
@@ -149,6 +13,150 @@
         "description": "Chess_Pieces.Chessman",
         "isExtraImport": true,
         "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Chessman",
+        "importPath": "Chess_Pieces.Chessman",
+        "description": "Chess_Pieces.Chessman",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Chessman",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Castle",
+        "importPath": "Chess_Pieces.Castle",
+        "description": "Chess_Pieces.Castle",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Castle",
+        "documentation": {}
+    },
+    {
+        "label": "King",
+        "importPath": "Chess_Pieces.King",
+        "description": "Chess_Pieces.King",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.King",
+        "documentation": {}
+    },
+    {
+        "label": "Knight",
+        "importPath": "Chess_Pieces.Knight",
+        "description": "Chess_Pieces.Knight",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Knight",
+        "documentation": {}
+    },
+    {
+        "label": "Queen",
+        "importPath": "Chess_Pieces.Queen",
+        "description": "Chess_Pieces.Queen",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Queen",
+        "documentation": {}
+    },
+    {
+        "label": "Pawn",
+        "importPath": "Chess_Pieces.Pawn",
+        "description": "Chess_Pieces.Pawn",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Pawn",
+        "documentation": {}
+    },
+    {
+        "label": "Bishop",
+        "importPath": "Chess_Pieces.Bishop",
+        "description": "Chess_Pieces.Bishop",
+        "isExtraImport": true,
+        "detail": "Chess_Pieces.Bishop",
         "documentation": {}
     },
     {
@@ -168,6 +176,14 @@
         "documentation": {}
     },
     {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "BoardGame",
         "importPath": "Chess_Pieces.BoardGame",
         "description": "Chess_Pieces.BoardGame",
@@ -180,7 +196,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.Bishop",
         "description": "Chess_Pieces.Bishop",
-        "peekOfCode": "class Bishop(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/bishop1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/bishop2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if abs(x) == abs(y) and (x, y) != (0, 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
+        "peekOfCode": "class Bishop(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/vYPWWFj/bishop1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/PgTB1hJ/bishop2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if abs(x) == abs(y) and (x, y) != (0, 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
         "detail": "Chess_Pieces.Bishop",
         "documentation": {}
     },
@@ -189,7 +205,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.Bishop",
         "description": "Chess_Pieces.Bishop",
-        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Bishop(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/bishop1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/bishop2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if abs(x) == abs(y) and (x, y) != (0, 0)}\n    def move(self, x , y):",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Bishop(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/vYPWWFj/bishop1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/PgTB1hJ/bishop2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if abs(x) == abs(y) and (x, y) != (0, 0)}\n    def move(self, x , y):",
         "detail": "Chess_Pieces.Bishop",
         "documentation": {}
     },
@@ -198,7 +214,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.BoardGame",
         "description": "Chess_Pieces.BoardGame",
-        "peekOfCode": "class BoardGame:\n    def __init__(self):\n        self.height = HEIGHT\n        self.width = WIDTH\n        self.chessmans = []  #Store chessmans in list\n    def add_chessman(self, chessman):\n        self.chessmans.append(chessman)\n    def has_chessman(self, x, y):\n        for chessman in self.chessmans:\n            if(chessman.current_x == x and chessman.current_y == y):",
+        "peekOfCode": "class BoardGame:\n    def __init__(self):\n        self.height = HEIGHT\n        self.width = WIDTH\n        self.chessmans = []  #Store chessmans in list\n        # Store pawn into chessmans\n        for x in range(8):\n            chessman = Pawn(x, 1, 1, self)\n            self.chessmans.append(chessman)\n            chessman = Pawn(x, 6, -1, self)",
         "detail": "Chess_Pieces.BoardGame",
         "documentation": {}
     },
@@ -207,7 +223,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.BoardGame",
         "description": "Chess_Pieces.BoardGame",
-        "peekOfCode": "HEIGHT = 8\nWIDTH = 8\nclass BoardGame:\n    def __init__(self):\n        self.height = HEIGHT\n        self.width = WIDTH\n        self.chessmans = []  #Store chessmans in list\n    def add_chessman(self, chessman):\n        self.chessmans.append(chessman)\n    def has_chessman(self, x, y):",
+        "peekOfCode": "HEIGHT = 8\nWIDTH = 8\nclass BoardGame:\n    def __init__(self):\n        self.height = HEIGHT\n        self.width = WIDTH\n        self.chessmans = []  #Store chessmans in list\n        # Store pawn into chessmans\n        for x in range(8):\n            chessman = Pawn(x, 1, 1, self)",
         "detail": "Chess_Pieces.BoardGame",
         "documentation": {}
     },
@@ -216,7 +232,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.BoardGame",
         "description": "Chess_Pieces.BoardGame",
-        "peekOfCode": "WIDTH = 8\nclass BoardGame:\n    def __init__(self):\n        self.height = HEIGHT\n        self.width = WIDTH\n        self.chessmans = []  #Store chessmans in list\n    def add_chessman(self, chessman):\n        self.chessmans.append(chessman)\n    def has_chessman(self, x, y):\n        for chessman in self.chessmans:",
+        "peekOfCode": "WIDTH = 8\nclass BoardGame:\n    def __init__(self):\n        self.height = HEIGHT\n        self.width = WIDTH\n        self.chessmans = []  #Store chessmans in list\n        # Store pawn into chessmans\n        for x in range(8):\n            chessman = Pawn(x, 1, 1, self)\n            self.chessmans.append(chessman)",
         "detail": "Chess_Pieces.BoardGame",
         "documentation": {}
     },
@@ -225,7 +241,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.Castle",
         "description": "Chess_Pieces.Castle",
-        "peekOfCode": "class Castle(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/castle1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/castle2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
+        "peekOfCode": "class Castle(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/FnHfTqQ/castle1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/0qxBNRw/castle2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
         "detail": "Chess_Pieces.Castle",
         "documentation": {}
     },
@@ -234,7 +250,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.Castle",
         "description": "Chess_Pieces.Castle",
-        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Castle(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/castle1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/castle2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}\n    def move(self, x , y):",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Castle(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/FnHfTqQ/castle1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/0qxBNRw/castle2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}\n    def move(self, x , y):",
         "detail": "Chess_Pieces.Castle",
         "documentation": {}
     },
@@ -243,7 +259,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.Chessman",
         "description": "Chess_Pieces.Chessman",
-        "peekOfCode": "class Chessman:\n    def __init__(self, x, y, enemy, boardGame):\n        self.current_x_y = (x, y)\n        self.enemy = enemy  #Check if chessman is enemy or not, if it is enemy, value is 1, if not value is -1\n        self.enable_coordinates = {}  # Store step to move (-1, 0), (1, 0), (0, 1), ...\n        self.boardGame = boardGame\n        self.img = \"\"\n    def set_enable_coordinates(self):\n        pass\n    def move(self, x, y):",
+        "peekOfCode": "class Chessman:\n    def __init__(self, x, y, enemy, boardGame):\n        self.current_x_y = (x, y)\n        self.enemy = enemy  #Check if chessman is enemy or not, if it is enemy, value is 1, if not value is -1\n        self.enable_coordinates = {}  # Store step to move (-1, 0), (1, 0), (0, 1), ...\n        self.boardGame = boardGame\n        self.img_src = \"\"\n    def set_enable_coordinates(self):\n        pass\n    def move(self, x, y):",
         "detail": "Chess_Pieces.Chessman",
         "documentation": {}
     },
@@ -252,7 +268,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.King",
         "description": "Chess_Pieces.King",
-        "peekOfCode": "class King(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/king1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/king2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-1, 2) for y in range(-1, 2) if (x != 0 or y != 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
+        "peekOfCode": "class King(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/sqZYzz0/king1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/FspF0hX/king2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-1, 2) for y in range(-1, 2) if (x != 0 or y != 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
         "detail": "Chess_Pieces.King",
         "documentation": {}
     },
@@ -261,7 +277,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.King",
         "description": "Chess_Pieces.King",
-        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass King(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/king1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/king2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-1, 2) for y in range(-1, 2) if (x != 0 or y != 0)}\n    def move(self, x , y):",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass King(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/sqZYzz0/king1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/FspF0hX/king2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-1, 2) for y in range(-1, 2) if (x != 0 or y != 0)}\n    def move(self, x , y):",
         "detail": "Chess_Pieces.King",
         "documentation": {}
     },
@@ -270,7 +286,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.Knight",
         "description": "Chess_Pieces.Knight",
-        "peekOfCode": "class Knight(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/knight1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/knight2.png\"\n        self.enable_coordinates = {(x, y) for x in (-1, -2, 1, 2) for y in (-1, -2, 1, 2) if abs(x) != abs(y)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
+        "peekOfCode": "class Knight(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/1RxhbpM/knight1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/FJxLBdL/knight2.png\"\n        self.enable_coordinates = {(x, y) for x in (-1, -2, 1, 2) for y in (-1, -2, 1, 2) if abs(x) != abs(y)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
         "detail": "Chess_Pieces.Knight",
         "documentation": {}
     },
@@ -279,7 +295,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.Knight",
         "description": "Chess_Pieces.Knight",
-        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Knight(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/knight1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/knight2.png\"\n        self.enable_coordinates = {(x, y) for x in (-1, -2, 1, 2) for y in (-1, -2, 1, 2) if abs(x) != abs(y)}\n    def move(self, x , y):",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Knight(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/1RxhbpM/knight1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/FJxLBdL/knight2.png\"\n        self.enable_coordinates = {(x, y) for x in (-1, -2, 1, 2) for y in (-1, -2, 1, 2) if abs(x) != abs(y)}\n    def move(self, x , y):",
         "detail": "Chess_Pieces.Knight",
         "documentation": {}
     },
@@ -288,7 +304,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.Pawn",
         "description": "Chess_Pieces.Pawn",
-        "peekOfCode": "class Pawn(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/pawn1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/pawn2.png\"\n        self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
+        "peekOfCode": "class Pawn(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/2yL2DQZ/pawn1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/58F8pSD/pawn2.png\"\n        self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
         "detail": "Chess_Pieces.Pawn",
         "documentation": {}
     },
@@ -297,7 +313,7 @@
         "kind": 5,
         "importPath": "Chess_Pieces.Pawn",
         "description": "Chess_Pieces.Pawn",
-        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Pawn(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/pawn1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/pawn2.png\"\n        self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}\n    def move(self, x , y):",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Pawn(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/2yL2DQZ/pawn1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/58F8pSD/pawn2.png\"\n        self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}\n    def move(self, x , y):",
         "detail": "Chess_Pieces.Pawn",
         "documentation": {}
     },
@@ -306,7 +322,7 @@
         "kind": 6,
         "importPath": "Chess_Pieces.Queen",
         "description": "Chess_Pieces.Queen",
-        "peekOfCode": "class Queen(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/queen1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/queen2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x != 0 or y != 0) and (abs(x) == abs(y) or x == 0 or y == 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
+        "peekOfCode": "class Queen(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/cbJB60d/queen1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/ZW1hBhK/queen2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x != 0 or y != 0) and (abs(x) == abs(y) or x == 0 or y == 0)}\n    def move(self, x , y):\n        if x >= 0 and x < 8 and y >= 0 and y < 8:",
         "detail": "Chess_Pieces.Queen",
         "documentation": {}
     },
@@ -315,16 +331,25 @@
         "kind": 5,
         "importPath": "Chess_Pieces.Queen",
         "description": "Chess_Pieces.Queen",
-        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Queen(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = PATH/\"Resources/Images/queen1.png\"\n        else:\n            self.img_src = PATH/\"Resources/Images/queen2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x != 0 or y != 0) and (abs(x) == abs(y) or x == 0 or y == 0)}\n    def move(self, x , y):",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent.parent\nclass Queen(Chessman):\n    def __init__(self, x, y, enemy, board):\n        super().__init__(x, y, enemy, board)\n        if self.enemy == 1:\n            self.img_src = \"https://i.ibb.co/cbJB60d/queen1.png\"\n        else:\n            self.img_src = \"https://i.ibb.co/ZW1hBhK/queen2.png\"\n        self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x != 0 or y != 0) and (abs(x) == abs(y) or x == 0 or y == 0)}\n    def move(self, x , y):",
         "detail": "Chess_Pieces.Queen",
         "documentation": {}
     },
     {
-        "label": "start_game",
+        "label": "home",
         "kind": 2,
         "importPath": "PyChess",
         "description": "PyChess",
-        "peekOfCode": "def start_game():\n    boardGame = BoardGame()\n    return render_template('index.html', boardGame = boardGame)\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "peekOfCode": "def home():\n    # Render the HTML template\n    return render_template('index.html')\n@app.route('/get_board', methods=['GET'])\ndef get_board():\n    # Example: Return the board state as JSON\n    board_state = {\n        'height': boardGame.height,\n        'width': boardGame.width,\n        'chessmans': [",
+        "detail": "PyChess",
+        "documentation": {}
+    },
+    {
+        "label": "get_board",
+        "kind": 2,
+        "importPath": "PyChess",
+        "description": "PyChess",
+        "peekOfCode": "def get_board():\n    # Example: Return the board state as JSON\n    board_state = {\n        'height': boardGame.height,\n        'width': boardGame.width,\n        'chessmans': [\n            {\n                'type': type(chessman).__name__,\n                'current_x': chessman.current_x_y[0],\n                'current_y': chessman.current_x_y[1],",
         "detail": "PyChess",
         "documentation": {}
     },
@@ -333,7 +358,16 @@
         "kind": 5,
         "importPath": "PyChess",
         "description": "PyChess",
-        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\ndef start_game():\n    boardGame = BoardGame()\n    return render_template('index.html', boardGame = boardGame)\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "peekOfCode": "app = Flask(__name__)\nboardGame = BoardGame()\n@app.route('/')\ndef home():\n    # Render the HTML template\n    return render_template('index.html')\n@app.route('/get_board', methods=['GET'])\ndef get_board():\n    # Example: Return the board state as JSON\n    board_state = {",
+        "detail": "PyChess",
+        "documentation": {}
+    },
+    {
+        "label": "boardGame",
+        "kind": 5,
+        "importPath": "PyChess",
+        "description": "PyChess",
+        "peekOfCode": "boardGame = BoardGame()\n@app.route('/')\ndef home():\n    # Render the HTML template\n    return render_template('index.html')\n@app.route('/get_board', methods=['GET'])\ndef get_board():\n    # Example: Return the board state as JSON\n    board_state = {\n        'height': boardGame.height,",
         "detail": "PyChess",
         "documentation": {}
     }
