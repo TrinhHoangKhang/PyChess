@@ -12,8 +12,8 @@ class Chessman:
     def move(self, x, y):
         pass
     
-    def beat(self, x, y):
-        self.move(x, y)
+    def capture(self, x, y):
+        self.capture(x, y)
         print(f"Beat at {x, y}")
 
     
