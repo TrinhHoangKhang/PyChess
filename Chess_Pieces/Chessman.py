@@ -4,7 +4,7 @@ class Chessman:
         self.enemy = enemy  #Check if chessman is enemy or not, if it is enemy, value is 1, if not value is -1
         self.enable_coordinates = {}  # Store step to move (-1, 0), (1, 0), (0, 1), ...
         self.boardGame = boardGame
-        self.img = ""
+        self.img_src = ""
     
     def set_enable_coordinates(self):
         pass
