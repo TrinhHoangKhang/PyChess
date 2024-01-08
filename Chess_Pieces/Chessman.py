@@ -13,7 +13,7 @@ class Chessman:
         pass
     
     def capture(self, x, y):
-        self.capture(x, y)
+        self.move(x, y)
         print(f"Beat at {x, y}")
 
     
