@@ -8,9 +8,9 @@ class Queen(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/cbJB60d/queen1.png"
+            self.img_src = "https://i.ibb.co/wKgDDdk/queen1.png"
         else:
-            self.img_src = "https://i.ibb.co/ZW1hBhK/queen2.png"
+            self.img_src = "https://i.ibb.co/0msmLhq/queen2.png"
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x != 0 or y != 0) and (abs(x) == abs(y) or x == 0 or y == 0)}
 
     def move(self, x , y):

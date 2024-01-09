@@ -1,18 +1,24 @@
+const EVENCOLOR = "#FDF172"
+const ODDCOLOR = "#E8E305"
 
-fetch('http://127.0.0.1:5000/get_board')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        generateChessBoard(data);
-    })
-    .catch(error => console.error('Error fetching board state:', error));
+function fetch_boardGame() {
+    fetch('http://127.0.0.1:5000/get_board')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            generateChessBoard(data);
+        })
+        .catch(error => console.error('Error fetching board state:', error));
+}
 
+fetch_boardGame()
 function generateChessBoard(data) {
     const chessBoard = document.getElementById("chessBoard");
+    chessBoard.innerHTML = ''; // Clear the existing board
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 8; col++) {
             const cell = document.createElement("div");
@@ -100,12 +106,11 @@ chessBoard.addEventListener("mousedown", (event) => {
                         // If the target_cell is empty, simply append the dragged piece
                         target_cell.appendChild(draggedPiece);
                     }
-
                     // Change the background color of the target cell
                     if (target_cell.classList.contains('even-row')) {
-                        target_cell.style.backgroundColor = "#F4F680";
+                        target_cell.style.backgroundColor = EVENCOLOR;
                     } else if (target_cell.classList.contains('odd-row')) {
-                        target_cell.style.backgroundColor = "#BBCC44";
+                        target_cell.style.backgroundColor = ODDCOLOR;
                     }
 
                     // Implement your logic to update the board state
@@ -132,9 +137,9 @@ chessBoard.addEventListener("mousedown", (event) => {
 
                         // Change the background color of the target cell
                         if (cell.classList.contains('even-row')) {
-                            cell.style.backgroundColor = "#F4F680";
+                            cell.style.backgroundColor = EVENCOLOR;
                         } else if (cell.classList.contains('odd-row')) {
-                            cell.style.backgroundColor = "#BBCC44";
+                            cell.style.backgroundColor = ODDCOLOR;
                         }
                     }
                 }
@@ -160,9 +165,9 @@ chessBoard.addEventListener("mousedown", (event) => {
 
             // Change the background color of the target cell
             if (cell.classList.contains('even-row')) {
-                cell.style.backgroundColor = "#F4F680";
+                cell.style.backgroundColor = EVENCOLOR;
             } else if (cell.classList.contains('odd-row')) {
-                cell.style.backgroundColor = "#BBCC44";
+                cell.style.backgroundColor = ODDCOLOR;
             }
         }
     }

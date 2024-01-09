@@ -40,16 +40,16 @@ body {
 }
 
 .odd-row{
-    background-color: #779954;
+    background-color: #D08B18;
 }
 
 .even-row{
-    background-color: #E9EDCC;
+    background-color: #FCE4B2;
 }
 
 .img-with-hover {
     width: 100%;
-    height: 100%;
+    max-height: calc(85vh/8);
     object-fit: contain;
 }
 

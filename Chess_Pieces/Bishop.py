@@ -8,9 +8,9 @@ class Bishop(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/vYPWWFj/bishop1.png"
+            self.img_src = "https://i.ibb.co/n6rZkMB/bishop1.png"
         else:
-            self.img_src = "https://i.ibb.co/PgTB1hJ/bishop2.png"
+            self.img_src = "https://i.ibb.co/L0TP96r/bishop2.png"
             
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if abs(x) == abs(y) and (x, y) != (0, 0)}
 

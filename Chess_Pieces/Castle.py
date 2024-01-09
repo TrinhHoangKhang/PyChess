@@ -8,9 +8,9 @@ class Castle(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/FnHfTqQ/castle1.png"
+            self.img_src = "https://i.ibb.co/7CQymKz/castle1.png"
         else:
-            self.img_src = "https://i.ibb.co/0qxBNRw/castle2.png"
+            self.img_src = "https://i.ibb.co/H4QJvBY/castle2.png"
 
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}
 
@@ -22,12 +22,13 @@ class Castle(Chessman):
                 enable_move = True
                 if(step_x != 0 and step_y == 0):
                     for x_move in range(self.current_x_y[0], x):
-                        if x_move != x and self.boardGame.has_chessman(x_move, self.current_x_y[1]) != 0:
+                        if x_move != self.current_x_y[0] and self.boardGame.has_chessman(x_move, self.current_x_y[1]) != 0:
+                            print(x_move)
                             enable_move = False
                             break
                 elif (step_x == 0 and step_y != 0):
                     for y_move in range(self.current_x_y[1], y):
-                        if y_move != y and self.boardGame.has_chessman(self.current_x_y[0], y_move) != 0:
+                        if y_move != self.current_x_y[1] and self.boardGame.has_chessman(self.current_x_y[0], y_move) != 0:
                             enable_move = False
                             break
                 if enable_move == True:
