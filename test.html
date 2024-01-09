@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the buttons */
+        .button {
+            padding: 200px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* Style for Button 1 */
+        .button1 {
+            background: url('https://i.ibb.co/TMnM6BT/unmute.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* Style for Button 2 */
+        .button2 {
+            background: url('https://i.ibb.co/ypYSTNP/mute.png') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML button element with an onclick event -->
+    <button class="button button1" id="toggleButton" onclick="toggleButton()">
+    </button>
+
+    <script>
+        // JavaScript function to toggle between Button 1 and Button 2
+        function toggleButton() {
+            var button = document.getElementById('toggleButton');
+
+            // Toggle between classes
+            if (button.classList.contains('button1')) {
+                button.classList.remove('button1');
+                button.classList.add('button2');
+            } else {
+                button.classList.remove('button2');
+                button.classList.add('button1');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

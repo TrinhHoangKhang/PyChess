@@ -6,9 +6,13 @@ app = Flask(__name__)
 boardGame = BoardGame()
 
 @app.route('/')
-def home():
+def intro_page():
     # Render the HTML template
-    return render_template('index.html')
+    return render_template('intro.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/get_board', methods=['GET'])
 def get_board():
