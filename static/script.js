@@ -1,18 +1,21 @@
+function fetch_boardGame() {
+    fetch('http://127.0.0.1:5000/get_board')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            generateChessBoard(data);
+        })
+        .catch(error => console.error('Error fetching board state:', error));
+}
 
-fetch('http://127.0.0.1:5000/get_board')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        generateChessBoard(data);
-    })
-    .catch(error => console.error('Error fetching board state:', error));
-
+fetch_boardGame()
 function generateChessBoard(data) {
     const chessBoard = document.getElementById("chessBoard");
+    chessBoard.innerHTML = ''; // Clear the existing board
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 8; col++) {
             const cell = document.createElement("div");
@@ -100,7 +103,6 @@ chessBoard.addEventListener("mousedown", (event) => {
                         // If the target_cell is empty, simply append the dragged piece
                         target_cell.appendChild(draggedPiece);
                     }
-
                     // Change the background color of the target cell
                     if (target_cell.classList.contains('even-row')) {
                         target_cell.style.backgroundColor = "#F4F680";

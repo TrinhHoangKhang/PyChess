@@ -49,7 +49,7 @@ body {
 
 .img-with-hover {
     width: 100%;
-    height: 100%;
+    max-height: calc(80vh/8);
     object-fit: contain;
 }
 

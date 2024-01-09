@@ -22,12 +22,13 @@ class Castle(Chessman):
                 enable_move = True
                 if(step_x != 0 and step_y == 0):
                     for x_move in range(self.current_x_y[0], x):
-                        if x_move != x and self.boardGame.has_chessman(x_move, self.current_x_y[1]) != 0:
+                        if x_move != self.current_x_y[0] and self.boardGame.has_chessman(x_move, self.current_x_y[1]) != 0:
+                            print(x_move)
                             enable_move = False
                             break
                 elif (step_x == 0 and step_y != 0):
                     for y_move in range(self.current_x_y[1], y):
-                        if y_move != y and self.boardGame.has_chessman(self.current_x_y[0], y_move) != 0:
+                        if y_move != self.current_x_y[1] and self.boardGame.has_chessman(self.current_x_y[0], y_move) != 0:
                             enable_move = False
                             break
                 if enable_move == True:
