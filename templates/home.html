@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <script defer src="{{ url_for('static', filename='home.js') }}"></script>
+    <title>Home</title>
+</head>
+<body>
+    <audio id="move-self-sound">
+        <source src="https://audio.jukehost.co.uk/VolNTmknGHs2AJnImtQm5RS4sLoUAjrR" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="capture-sound">
+        <source src="https://audio.jukehost.co.uk/rcV62TYljlve3NwpboFLIaM4XTpxJlPd" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="notify-sound">
+        <source src="https://audio.jukehost.co.uk/bYMDr3Grtt2szR3N1SXTCh26DL9DRblW" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="click-sound">
+        <source src="https://audio.jukehost.co.uk/KhkvoTfg8abIPXNVEYxKDgeFZEU9y87n" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="taskbar" style="flex: 1; background-color: #262522;">
+        
+    </div>
+
+    <div class="main_screen" style="flex: 5;">
+        <div id="chessBoard"></div>
+    </div>
+
+    <div class="video_screen" style="flex: 2; background-color: #525A6A;">
+    </div>
+
+    
+</body>
+</html>

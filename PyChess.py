@@ -6,9 +6,13 @@ app = Flask(__name__)
 boardGame = BoardGame()
 
 @app.route('/')
-def home():
+def intro_page():
     # Render the HTML template
-    return render_template('index.html')
+    return render_template('intro.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/get_board', methods=['GET'])
 def get_board():
@@ -42,9 +46,12 @@ def move_chess(x0, y0, x1, y1):
         if chessman.current_x_y[0] == x0 and chessman.current_x_y[1] == y0:
             need_to_move_chess = chessman
     
-    if boardGame.chessmans[boardGame.chessmans.index(need_to_move_chess)].move(x1, y1) == 1:
-        return jsonify({'status': 1})
-    return jsonify({'status': 0})
+    result = boardGame.chessmans[boardGame.chessmans.index(need_to_move_chess)].move(x1, y1)
+    if result == [1, 0]:
+        return jsonify({'status': [1, 0]})
+    elif result == [1, 1]:
+        return jsonify({'status': [1, 1]})
+    return jsonify({'status': [0, 0]})
 
 
 

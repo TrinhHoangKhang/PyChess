@@ -21,7 +21,7 @@ class Pawn(Chessman):
                     if ((step_x, step_y) == (0, 2) and self.current_x_y[1] == 1 and self.enemy == 1):
                         if self.boardGame.has_chessman(self.current_x_y[0], self.current_x_y[1] + 1) == 0:
                             self.current_x_y = (self.current_x_y[0], self.current_x_y[1] + 2)
-                            return 1
+                            return [1, 0]
                         else:
                             print("There is a chessman in front of pawn!")
                             return 0
@@ -29,19 +29,19 @@ class Pawn(Chessman):
                     elif ((step_x, step_y) == (0, -2) and self.current_x_y[1] == 6 and self.enemy == -1):
                         if self.boardGame.has_chessman(self.current_x_y[0], self.current_x_y[1] - 1) == 0:
                             self.current_x_y = (self.current_x_y[0], self.current_x_y[1] - 2)
-                            return 1
+                            return [1, 0]
                         else:
                             print("There is a chessman in front of pawn!")
                             return 0
                     elif (((step_x, step_y) == (0, -1) and self.enemy == -1) or ((step_x, step_y) == (0, 1) and self.enemy == 1)):
                         self.current_x_y = (x, y)
-                        return 1
+                        return [1, 0]
                     
                 elif self.boardGame.has_chessman(x, y) * self.enemy == -1:
                     if step_x != 0:
                         self.boardGame.remove_chessman(x, y)
                         self.current_x_y = (x, y)
-                        return 1
+                        return [1, 1]
                     else:
                         print("Enemy is front of pawn")
                         return 0
