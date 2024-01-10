@@ -60,11 +60,12 @@ class BoardGame:
     
     def has_chessman(self, x, y):
         for chessman in self.chessmans:
-            if(chessman.current_x_y[0] == x and chessman.current_x_y[1] == y):
+            if(chessman.current_x_y == (x, y)):
                 return chessman.enemy
         return 0
 
     def remove_chessman(self, x, y):
+        print("Remove")
         for chessman in self.chessmans:
-            if(chessman.current_x_y[0] == x and chessman.current_x_y[1] == y):
+            if(chessman.current_x_y == (x, y)):
                 self.chessmans.remove(chessman)

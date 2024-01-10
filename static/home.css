@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.taskbar,
+.main_screen,
+.video_screen {
+    box-sizing: border-box;
+}
+
+.main_screen {
+    flex: 5;
+    background-color: #302E2B;
+    position: relative;
+}
+
+#chessBoard{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border: 5px solid white;
+    left: 50px;
+    position: absolute;
+}
+
+
+.cell {
+    width: calc(99vh/8);
+    height: calc(99vh/8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.odd-row{
+    background-color: #D08B18;
+}
+
+.even-row{
+    background-color: #FCE4B2;
+}
+
+.img-with-hover {
+    width: 100%;
+    max-height: calc(85vh/8);
+    object-fit: contain;
+}
+
+.cell-highlight {
+    background-color: lightblue;
+}

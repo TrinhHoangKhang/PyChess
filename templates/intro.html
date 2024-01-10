@@ -324,6 +324,10 @@
 
 <body>
     <div class="animation-container">
+        <audio id="game-start-sound">
+            <source src="https://audio.jukehost.co.uk/hbxke4yZP1apL2juDtQYvIAH8X1dIIEX" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
         <audio id="myAudio">
             <source src="https://audio.jukehost.co.uk/tIOUAfLtI3cKauSPvy3I9OPekM2aqQi8" type="audio/mp3">
             Your browser does not support the audio element.
@@ -335,7 +339,7 @@
         </div>
         <div style="top: 40px" class="name-game">
             <img style="width: 50%;" src="https://i.ibb.co/P41Tf7Y/logo.png" alt="Moving logo">
-            <a href="{{ url_for('home') }}" class="button type--C">
+            <a href="{{ url_for('home') }}" class="button type--C" id="Link-to-home">
                 <div class="button__line"></div>
                 <div class="button__line"></div>
                 <span class="button__text">PLAY GAME</span>
@@ -367,7 +371,20 @@
         
     </script>
 
-    
+    <script>
+        document.getElementById("Link-to-home").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default behavior of navigating to the href
+
+            var audio = document.getElementById("game-start-sound");
+            if (audio) {
+                audio.play();
+                audio.addEventListener("ended", function () {
+                    // Audio has ended, navigate to the specified href
+                    window.location.href = document.getElementById("Link-to-home").getAttribute("href");
+                });
+            }
+        });
+    </script>
 
 </body>
 

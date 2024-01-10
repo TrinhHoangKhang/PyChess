@@ -45,12 +45,12 @@ class Bishop(Chessman):
                     if self.boardGame.has_chessman(x, y) == 0:
                         self.current_x_y = (x, y)
 
-                        return 1
+                        return [1, 0]
                     elif self.boardGame.has_chessman(x, y) * self.enemy == -1:
                         self.boardGame.remove_chessman(x, y)
                         self.current_x_y = (x, y)
 
-                        return 1
+                        return [1, 1]
                     else:
                         print("Destination is not enemy")
                         return 0
