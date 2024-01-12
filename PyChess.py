@@ -14,6 +14,7 @@ def intro_page():
 def home():
     return render_template('home.html')
 
+
 @app.route('/get_board', methods=['GET'])
 def get_board():
     # Example: Return the board state as JSON
