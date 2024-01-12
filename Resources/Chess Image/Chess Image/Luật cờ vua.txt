@@ -1,0 +1,13 @@
+Luật cờ vua
+A. Các nước đi:
+1. Vua: Di chuyển từng ô một theo một hàng ngang - cột dọc - hàng chéo trênn khắp bàn cờ. Hai vua không thể đối mặt nhau.
+2. Hoàng hậu: Di chuyển một hay nhiều ô theo hàng ngang - cột dọc - hàng chéo trên bàn cờ.
+3. Xe: Di chuyển một hay nhiều ô theo hàng ngang và cột dọc.
+4. Tượng: Di chuyển một hay nhiều ô theo đường chéo từ ô nó đứng. Mỗi bên có một tượng đi trên các đường màu sậm và một tượng đi trên các đường màu nhạt.
+5. Mã: Di chuyển trên đường chéo của hình chữ nhật, có diện tích ngang 2 ô và dọc 3 ô hoặc ngược lại - nghĩa là đi đến ô khác màu gần nhất mà không tiếp xúc với ô nó đang đứng.
+6. Tốt: Di chuyển về phía trước từng ô một không rút. Từ vị trí ban đầu, Tốt có thể đi về phía trước một hoặc hai ô tùy ý của người chơi. Tốt đi thẳng nhưng ăn chéo. Tốt ăn quân ở một trong hai ô cùng màu tiếp xúc với ô đang đứng.
+B. Luật chơi chung:
+1. Trên bàn cờ, có hai màu: Đen và Trắng.
+2. Khi một quân cờ di chuyển vào ô vào ô có quân cờ khác của đối phương, quân cờ của đối phương bị bắt vào được loại bỏ khỏi bàn cờ
+3. Khi quân vua bị chiếu, người chơi phải xử lí chiếu của đối phương và không được bỏ qua nó. Nếu không thể xử lí chiếu, người chơi phải di chuyển quân vua của mình để tránh bị chiếu.
+4. Tr

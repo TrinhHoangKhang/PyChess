@@ -8,7 +8,7 @@ class Pawn(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/44yfrZW/pawn1.png"
+            self.img_src = "https://i.ibb.co/mHN6jC6/pawn1.png"
         else:
             self.img_src = "https://i.ibb.co/jRVFgYT/pawn2.png"
         self.enable_coordinates = {(x * self.enemy, y * self.enemy) for x, y in {(0, 1), (-1, 1), (1, 1), (0, 2)}}

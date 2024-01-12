@@ -15,7 +15,7 @@ function fetch_boardGame() {
         .catch(error => console.error('Error fetching board state:', error));
 }
 
-fetch_boardGame()
+//fetch_boardGame()
 function generateChessBoard(data) {
     const chessBoard = document.getElementById("chessBoard");
     chessBoard.innerHTML = ''; // Clear the existing board

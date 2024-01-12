@@ -4,51 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Style for the buttons */
-        .button {
-            padding: 200px;
-            font-size: 20px;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-
-        /* Style for Button 1 */
-        .button1 {
-            background: url('https://i.ibb.co/TMnM6BT/unmute.png') no-repeat center center;
-            background-size: cover;
-        }
-
-        /* Style for Button 2 */
-        .button2 {
-            background: url('https://i.ibb.co/ypYSTNP/mute.png') no-repeat center center;
-            background-size: cover;
-        }
-    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Slideshow</title>
 </head>
 
 <body>
 
-    <!-- HTML button element with an onclick event -->
-    <button class="button button1" id="toggleButton" onclick="toggleButton()">
-    </button>
+    <div class="container mt-5">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://i.ibb.co/mHN6jC6/pawn1.png" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co/jRVFgYT/pawn2.png" class="d-block w-100" alt="Image 2">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 
-    <script>
-        // JavaScript function to toggle between Button 1 and Button 2
-        function toggleButton() {
-            var button = document.getElementById('toggleButton');
-
-            // Toggle between classes
-            if (button.classList.contains('button1')) {
-                button.classList.remove('button1');
-                button.classList.add('button2');
-            } else {
-                button.classList.remove('button2');
-                button.classList.add('button1');
-            }
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 

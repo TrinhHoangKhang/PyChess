@@ -53,7 +53,5 @@ def move_chess(x0, y0, x1, y1):
         return jsonify({'status': [1, 1]})
     return jsonify({'status': [0, 0]})
 
-
-
 if __name__ == "__main__":
     app.run(debug=True)
