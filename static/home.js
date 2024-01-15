@@ -1,6 +1,42 @@
 const EVENCOLOR = "#FDF172"
 const ODDCOLOR = "#E8E305"
 
+document.addEventListener('DOMContentLoaded', function () {
+    function play_online_click() {
+
+        var videoFrame = document.getElementById('video_screen_id');
+        var main_screen = document.getElementById('main_screen_id');
+        videoFrame.style.flex = '2';
+        main_screen.style.flex = '5';
+        main_screen.style.boxSizing = 'border-box';
+        main_screen.style.backgroundColor  = "#302E2B";
+        main_screen.style.position = "relative";
+        // The rest of your code for the Carousel setup goes here
+        var galleryID = document.getElementById('galleryID');
+        galleryID.style.display = 'none';
+
+        var chessBoard = document.getElementById('chessBoard');
+        if (chessBoard) {
+            chessBoard.style.display = 'block';
+            chessBoard.style.display = "grid";
+            chessBoard.style.gridTemplateColumns = "repeat(8, 1fr)"; // Use camelCase for property names, and enclose values in quotes
+            chessBoard.style.border = '5px solid white'; // Enclose the value in quotes
+            chessBoard.style.left = '50px'; // Enclose the value in quotes
+            chessBoard.style.position = 'absolute'; // Enclose the value in quotes
+        }
+
+
+        var guideID = document.getElementById("guide_frame");
+        guideID.style.display = 'none';
+
+        fetch_boardGame();
+    }
+    var myButton = document.getElementById('play-online-btn');
+    if (myButton) {
+        myButton.onclick = play_online_click;
+    }
+});
+
 function fetch_boardGame() {
     fetch('http://127.0.0.1:5000/get_board')
         .then(response => {

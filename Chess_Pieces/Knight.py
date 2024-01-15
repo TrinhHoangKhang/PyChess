@@ -8,9 +8,9 @@ class Knight(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/4mjKm9Z/knight1.png"
+            self.img_src = "https://i.ibb.co/4spsF3M/knight1.webp"
         else:
-            self.img_src = "https://i.ibb.co/YDKZDCw/knight2.png"
+            self.img_src = "https://i.ibb.co/nzw9wL1/knight2.webp"
             
         self.enable_coordinates = {(x, y) for x in (-1, -2, 1, 2) for y in (-1, -2, 1, 2) if abs(x) != abs(y)}
 

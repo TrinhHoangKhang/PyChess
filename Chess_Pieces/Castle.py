@@ -8,9 +8,9 @@ class Castle(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/7CQymKz/castle1.png"
+            self.img_src = "https://i.ibb.co/jfPRtKV/castle1.webp"
         else:
-            self.img_src = "https://i.ibb.co/H4QJvBY/castle2.png"
+            self.img_src = "https://i.ibb.co/tmXLwDt/castle2.webp"
 
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x == 0 or y == 0) and (x, y) != (0, 0)}
 

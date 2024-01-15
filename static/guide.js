@@ -12,14 +12,10 @@ class Carousel{
     }
 
     updateGallery() {
-        this.carouselArray.forEach(el => {
-            el.classList.remove('gallery-item-1');
-            el.classList.remove('gallery-item-2');
-            el.classList.remove('gallery-item-3');
-            el.classList.remove('gallery-item-4');
-            el.classList.remove('gallery-item-5');
-            el.classList.remove('gallery-item-6');
-            el.classList.remove('gallery-item-7');
+       this.carouselArray.forEach(el => {
+            for (let i = 1; i <= 7; i++) {
+                el.classList.remove(`gallery-item-${i}`);
+            }
         });
 
         this.carouselArray.slice(0, 7).forEach((el, i) => {
@@ -64,6 +60,15 @@ class Carousel{
     }
 
     useControls() {
+        const controlsContainer = galleryControlsContainer;
+
+        // Clear existing controls before adding new ones
+        controlsContainer.innerHTML = '';
+
+        this.carouselControls.forEach(control => {
+            controlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
+            document.querySelector(`.gallery-controls-${control}`).innerText = control;
+        });
         const triggers = [...galleryControlsContainer.childNodes];
         triggers.forEach(control => {
             control.addEventListener('click', e => {
@@ -74,32 +79,43 @@ class Carousel{
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var galleryID = document.getElementById('galleryID');
-    if (galleryID) {
-        galleryID.style.display = 'none';
-    }
 
+document.addEventListener('DOMContentLoaded', function () {
     var chessBoard = document.getElementById('chessBoard');
     if (chessBoard) {
         chessBoard.style.display = 'none';
     }
     function guide_click() {
+        chessBoard.style.display = 'none';
         galleryID.style.display = 'block';
+
+        var guideFrame = document.getElementById('guide_frame');
+        guideFrame.style.display = 'block';
+
+        const allContainers = document.querySelectorAll('.container.mt-5');
+        allContainers.forEach(container => {
+            container.style.display = 'none';
+        });
+
+        const all_detail_chess = document.querySelectorAll('.detail_frame');
+        all_detail_chess.forEach(container => {
+            container.style.display = 'none';
+        });
+        
+
         var videoFrame = document.getElementById('video_screen_id');
         var main_screen = document.getElementById('main_screen_id');
         if (videoFrame) {
             videoFrame.style.flex = '0';
             main_screen.style.flex = '7';
-            main_screen.style.background = "url('https://i.ibb.co/HHFv2cL/2301-w062-n005-13-B-p1-13.jpg')";
-            main_screen.style.backgroundSize = 'cover';
             // The rest of your code for the Carousel setup goes here
-            const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-            exampleCarousel.setControls();
-            exampleCarousel.useControls();
         } else {
             console.error("Element with ID 'video_screen_id' not found.");
         }
+        const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+        exampleCarousel.setControls();
+        exampleCarousel.useControls();
+        
     }
     var myButton = document.getElementById('guide-btn');
     if (myButton) {
