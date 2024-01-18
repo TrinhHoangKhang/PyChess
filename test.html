@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>innerHTML Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #timer {
+            font-size: 36px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div id="outerDiv" style="display: none;">
-        <div id="innerDiv1">Inner Div 1</div>
-        <div id="innerDiv2">Inner Div 2</div>
-    </div>
-    <div id="innerDiv2">Inner Div 2</div>
+    <div id="timer">00:00:00</div>
 
     <script>
-        // Lấy nội dung HTML của phần tử có id là "outerDiv"
-        var content = document.getElementById("outerDiv").innerHTML;
-        console.log("Nội dung hiện tại của outerDiv:", content);
+        // Set the countdown time in seconds
+        var countdownTime = 30; // 5 minutes
 
-        // Thiết lập nội dung mới cho phần tử có id là "outerDiv"
-        document.getElementById("outerDiv").style.display = 'none';
+        function updateTimer() {
+            var minutes = Math.floor(countdownTime / 60);
+            var seconds = countdownTime % 60;
+
+            // Add leading zeros if needed
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            // Update the timer display
+            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+            // Decrement the countdown time
+            countdownTime--;
+
+            // Check if the countdown has reached zero
+            if (countdownTime < 0) {
+                clearInterval(timerInterval); // Stop the timer
+                document.getElementById("timer").innerHTML = "Time's up!";
+            }
+        }
+
+        // Update the timer every second
+        var timerInterval = setInterval(updateTimer, 1000);
     </script>
 
 </body>

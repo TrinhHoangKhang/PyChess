@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var videoFrame = document.getElementById('video_screen_id');
         var main_screen = document.getElementById('main_screen_id');
         if (videoFrame) {
-            videoFrame.style.flex = '0';
+            videoFrame.style.display = 'none';
             main_screen.style.flex = '7';
             // The rest of your code for the Carousel setup goes here
         } else {
