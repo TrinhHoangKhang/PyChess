@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='guide.css') }}">
     <script defer src="{{ url_for('static', filename='home.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='guide.js') }}"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-UF5RrrGym/CiPY+4COJh18jm8JJWpZWY0WASsi0aEEx/20yaEq6vv9EmPXpGYQ9N3clxhOelMJKcr3i00/CAyQ=="
+        crossorigin="anonymous" />
     <title>Home</title>
 </head>
 <body>
@@ -24,18 +33,346 @@
         <source src="https://audio.jukehost.co.uk/KhkvoTfg8abIPXNVEYxKDgeFZEU9y87n" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+    <audio id="win-game-sound">
+        <source src="https://audio.jukehost.co.uk/FXt5hQWyA7JV5Maxn4B76zzUHphBLC92" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
 
     <div class="taskbar" style="flex: 1; background-color: #262522;">
+        <div id="buttonContainer">
+            <button style="border-width: 0; height: 60px; margin: 20px 0px 20px 0px;" id="logo-btn">
+                <img style="width: 100%; position: relative;" src="https://i.ibb.co/vXhHPMZ/logo.webp" alt="Logo">    
+            </button>
+            <button style="border-width: 0; height: 80px; padding-left: 20px;" id="play-online-btn">
+                <img style="height: 100%; position: relative; margin-right: 10px;" src="https://i.ibb.co/0qfPVgP/multiplayer.webp" alt="Play-online">
+                Play online
+            </button>
+            <button style="border-width: 0; height: 80px; padding-left: 20px;" id="play-computer-btn">
+                <img style="height: 100%; position: relative; margin-right: 10px;" src="https://i.ibb.co/BwWd1XV/computer.webp" alt="Play-computer">
+                Play computer
+            </button>
+            <button style="border-width: 0; height: 80px; padding-left: 20px;" id="practice-btn">
+                <img style="height: 100%; position: relative; margin-right: 10px;" src="https://i.ibb.co/5kSVbpw/practice.webp"
+                    alt="Practice">
+                Practice
+            </button>
+            <button style="border-width: 0; height: 80px; padding-left: 20px;" id="friends-btn">
+                <img style="height: 100%; position: relative; margin-right: 10px;" src="https://i.ibb.co/bdh4XTD/friend.webp"
+                    alt="Friends">
+                Friends
+            </button>
+            <button style="border-width: 0; height: 80px; padding-left: 20px;" id="guide-btn">
+                <img style="height: 100%; position: relative; margin-right: 10px;" src="https://i.ibb.co/44ZRKNv/guide.webp"
+                    alt="Guide">
+                Guide
+            </button>
+        </div>
+    </div>
+
+    <div id="main_screen_id" class="main_screen" style="flex: 7; background-image: url('https://i.ibb.co/7Wx9PmQ/egypt-background.webp'); background-size: cover;">
+        <div class="games-screen" id="chessBoard" style="display: none;"></div>
         
+        <div class="card animate__animated animate__bounceIn" id="card-notification" style="width: 25rem; align-items: center; text-align: center; border-width: 5px; display: none;">
+            <img src="https://media.giphy.com/media/B6HXq0xAzld5TrlpYK/giphy.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="animate__animated animate__tada" style="animation-iteration-count: infinite;">YOU WON 😉</h1>
+                <p style="font-weight: 600;">In chess, as in life, the one who thinks one move ahead is the winner.</p>
+                <button class="button-80" id="replay-btn" style="border: solid 3px; margin-bottom: 7px;" role="button">Replay</button>
+                <div style="display: flex; flex-direction: row;">
+                    <button class="card-button"style="margin-right: 2px;" role="button">Exit</button>
+                    <button class="card-button rewatch-btn"style="background-color: #30D46F; margin-left: 2px;">Rewatch</button>
+                </div>
+            </div>
+        </div>
+        <div class="timer" id="timer1" style="display: none;">00:00</div>
+        <div class="timer" id="timer2" style="display: none;">00:00</div>
+        <div class="guide" id="guide_frame" style="display: none;">
+            
+            <div class="container mt-5" style="margin-left: 10px; flex: 1">
+                <div id="chessBoardCarousel" class="carousel slide" data-ride="carousel"
+                    style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/wpBY8xk/chessboard-frame.webp" class="d-block w-100" alt="Chess-Board"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-5" style="margin-left: 10px; flex: 1;">
+                <div id="bishopCarousel" class="carousel slide" data-ride="carousel"
+                    style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/Kjgp9ZB/bishop1-frame.webp" alt="Bishop1"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ibb.co/XYmqZrY/bishop2-frame.webp" alt="Bishop2"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#bishopCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#bishopCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container mt-5" style="margin-left: 10px; flex: 1">
+                <div id="queenCarousel" class="carousel slide" data-ride="carousel"
+                    style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/9bn892D/queen1-frame.webp" class="d-block w-100" alt="Queen1"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ibb.co/YtVxzcP/queen2-frame.webp" class="d-block w-100" alt="Queen2"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#queenCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#queenCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container mt-5" style="margin-left: 10px; flex: 1">
+                <div id="kingCarousel" class="carousel slide" data-ride="carousel" style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/029dfsN/king1-frame.webp" class="d-block w-100" alt="King1"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ibb.co/Jn0znn0/king2-frame.webp" class="d-block w-100" alt="King2"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#kingCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#kingCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container mt-5" style="margin-left: 10px; flex: 1">
+                <div id="pawnCarousel" class="carousel slide" data-ride="carousel" style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/6PVshG6/pawn1-frame.webp" class="d-block w-100" alt="Pawn1" style="height: 500px; width: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ibb.co/3vXQvNP/pawn2-frame.webp" class="d-block w-100" alt="Pawn2" style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#pawnCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#pawnCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container mt-5" style="margin-left: 10px; flex: 1">
+                <div id="castleCarousel" class="carousel slide" data-ride="carousel" style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/QkfJX66/castle1-frame.webp" class="d-block w-100" alt="Castle1"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ibb.co/9wjfT4M/castle2-frame.webp" class="d-block w-100" alt="Castle2"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#castleCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#castleCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container mt-5" style="margin-left: 10px; flex: 1">
+                <div id="knightCarousel" class="carousel slide" data-ride="carousel"
+                    style="width: 500px; margin: auto; float: left;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ibb.co/GRYXrhg/knight1-frame.webp" class="d-block w-100" alt="Knight1"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.ibb.co/jMPPTnw/knight2-frame.webp" class="d-block w-100" alt="Knight2"
+                                style="height: 500px; width: 500px;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#knightCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#knightCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/3mtJRvb/chess-board-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content" style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>Helloaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h3>
+                </div>
+            </div>
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/FnCDrvg/bishop-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content" style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>- Di chuyển một hay nhiều ô theo đường chéo từ ô nó đứng.</h3>
+                    <h3>- Mỗi bên có một tượng đi trên các đường màu sậm và một tượng đi
+                    trên các đường màu nhạt.</h3>
+                </div>
+            </div>
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/RhBkgxQ/queen-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content"
+                    style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>- Di chuyển một hay nhiều ô theo hàng ngang - cột dọc - hàng chéo trên bàn cờ.</h3>
+                </div>
+            </div>
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/ScMJ9TN/king-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content"
+                    style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>- Di chuyển từng ô một theo một hàng ngang - cột dọc - hàng chéo trên khắp bàn cờ.</h3>
+                    <h3>- Hai vua không thể đối mặt nhau.</h3>
+                </div>
+            </div>
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/NKL0pmj/pawn-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content"
+                    style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>- Di chuyển về phía trước từng ô một không rút.</h3>
+                    <h3>- Từ vị trí ban đầu, Tốt có thể đi về phía trước một hoặc hai ô tùy ý của
+                    người chơi.</h3>
+                    <h3>- Tốt đi thẳng nhưng ăn chéo.</h3>
+                    <h3>- Tốt ăn quân ở một trong hai ô cùng màu tiếp xúc với ô đang đứng.</h3>
+                </div>
+            </div>
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/wKNhp0v/castle-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content"
+                    style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>- Di chuyển một hay nhiều ô theo hàng ngang và cột dọc.</h3>
+                </div>
+            </div>
+            <div class="detail_frame">
+                <img src="https://i.ibb.co/BqGYRmj/knight-detail.webp"
+                    style="margin-left: 20px; position: absolute; width: auto; height: 85%;">
+                <div class="chess_content"
+                    style="position: absolute; top: 26%; left: 32%; width: 700px; height: 300px; overflow: auto;">
+                    <h3>- Di chuyển trên đường chéo của hình chữ nhật, có diện tích ngang 2 ô và dọc 3 ô.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="galleryID" class="gallery" style="display: none;">
+            <div class="gallery-container">
+                <img class="gallery-item gallery-item-1" src="https://i.ibb.co/Css4pj6/pawn.webp" data-index="1">
+                <img class="gallery-item gallery-item-2" src="https://i.ibb.co/TPWZYzh/castle.webp" data-index="2">
+                <img class="gallery-item gallery-item-3" src="https://i.ibb.co/PGCzgQV/knight.webp" data-index="3">
+                <img class="gallery-item gallery-item-4" src="https://i.ibb.co/wQ1X1ks/war.webp" data-index="4">
+                <img class="gallery-item gallery-item-5" src="https://i.ibb.co/3S7WBLt/bishop.webp" data-index="5">
+                <img class="gallery-item gallery-item-6" src="https://i.ibb.co/kDq2T3K/queen.webp" data-index="6">
+                <img class="gallery-item gallery-item-7" src="https://i.ibb.co/FzMkPyb/king.webp" data-index="7">
+            </div>
+            <div class="gallery-controls"></div>
+        </div>
     </div>
 
-    <div class="main_screen" style="flex: 5;">
-        <div id="chessBoard"></div>
+    <div id="video_screen_id" class="video_screen" style="flex: 3; display: none; background: linear-gradient( 89.8deg, rgba(102,51,153,1) 2.2%, rgba(175,170,255,1) 98% );">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" id="time-btn"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        <div class="centered-content">
+                            <img src="https://i.ibb.co/Gsvh8sS/clock.webp" style="height: 40px; width: auto; margin-right: 10px; margin-bottom: 5px;">
+                            <h3>10 min</h3>
+                        </div>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="background-color: #CFE2FF;">
+                    <div class="accordion-body">
+                        <div class="label">
+                            <img src="https://i.ibb.co/GFxVzFn/rocket.webp" style="height: 30px; width: auto;">
+                            <h5>Bullet</h5>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example" style="width: 100%; height: 60px;">
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="margin-right: 20px; border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">1 min</button>
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="margin-right: 20px; border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">1 | 1</button>
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">2 | 1</button>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="label">
+                            <img src="https://i.ibb.co/kh2Rjzh/power.webp" style="height: 30px; width: auto;">
+                            <h5>Blitz</h5>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example" style="width: 100%; height: 60px;">
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="margin-right: 20px; border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">3 min</button>
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="margin-right: 20px; border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">3 | 2</button>
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">5 min</button>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="label">
+                            <img src="https://i.ibb.co/Gsvh8sS/clock.webp" style="height: 30px; width: auto;">
+                            <h5>Rapid</h5>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example" style="width: 100%; height: 60px;">
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="margin-right: 20px; border-radius: 10px; background-color: #1FC2FF; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">10 min</button>
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="margin-right: 20px; border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">15 | 10</button>
+                            <button type="button" class="btn btn-primary" onclick="selectButton(this)" style="border-radius: 10px; background-color: #3DD1E7; color: black; border: 3px solid black; font-size: 20px; font-weight: 700;">30 min</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="button-80" onclick="startPlayGame()" role="button" style="margin-top: 10px;margin-left: 50px; height: 70px; width: 770px;">Play</button>
+        </div>
     </div>
 
-    <div class="video_screen" style="flex: 2; background-color: #525A6A;">
-    </div>
-
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
 </body>
 </html>

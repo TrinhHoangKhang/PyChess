@@ -13,7 +13,7 @@ class BoardGame:
         self.height = HEIGHT
         self.width = WIDTH
         self.chessmans = []  #Store chessmans in list
-
+        self.turn = -1
         # Store pawn into chessmans
         for x in range(8):
             chessman = Pawn(x, 1, 1, self)

@@ -8,12 +8,16 @@ class Queen(Chessman):
         super().__init__(x, y, enemy, board)
 
         if self.enemy == 1:
-            self.img_src = "https://i.ibb.co/wKgDDdk/queen1.png"
+            self.img_src = "https://i.ibb.co/RQC1tnx/queen1.webp"
         else:
-            self.img_src = "https://i.ibb.co/0msmLhq/queen2.png"
+            self.img_src = "https://i.ibb.co/LYXs3T5/queen2.webp"
+            
         self.enable_coordinates = {(x, y) for x in range(-7, 8) for y in range(-7, 8) if (x != 0 or y != 0) and (abs(x) == abs(y) or x == 0 or y == 0)}
 
     def move(self, x , y):
+        if self.boardGame.turn * self.enemy != 1:
+            print(f"{(x, y)} is  invalid")
+            return 0
         if x >= 0 and x < 8 and y >= 0 and y < 8:
             step_x, step_y = x - self.current_x_y[0], y - self.current_x_y[1]
             if (step_x, step_y) in self.enable_coordinates:
@@ -54,11 +58,13 @@ class Queen(Chessman):
                     if self.boardGame.has_chessman(x, y) == 0:
                         self.current_x_y = (x, y)
 
+                        self.boardGame.turn = self.boardGame.turn * -1
                         return [1, 0]
                     elif self.boardGame.has_chessman(x, y) * self.enemy == -1:
                         self.boardGame.remove_chessman(x, y)
                         self.current_x_y = (x, y)
 
+                        self.boardGame.turn = self.boardGame.turn * -1
                         return [1, 1]
                     else:
                         print("Destination is not enemy")
